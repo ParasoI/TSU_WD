@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="title">
+        <h1>Multiplication Table</h1>
+    </div>
+    <div class="multiplier-container">
+        Enter the multiplier limit number:
+        <input id="multiplier" type="text">
+    </div>
+    <div style="display: inline-block;" class="multiplicand-limit-container">
+        Enter the multiplicand limit number:
+        <input id="multiplicand-limit" type="text">
+    </div>
+    <button onclick="process()">Process</button>
+    <div style="display:none" id="product-container">
+        <h3>Results</h3>
+    </div>
+</body>
+</html>
