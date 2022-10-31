@@ -12,10 +12,6 @@ function getMultiplier() {
 
 //View
 
-function renderResults() {
-
-}
-
 //Controller
 function process() {
     const multiplicandLimit = getMultiplicandLimit();
