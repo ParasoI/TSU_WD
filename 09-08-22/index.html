@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ralp</title>
+
+    <script type="text/javascript">
+        function PlayVideo() {
+            var v = document.getElementsByTagName("video")[0];
+            v.play();
+            v.volume = .25;
+        }
+    </script>
+
+    <style>
+        a.smooth {
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          padding: 1em 2em;
+          width:10em;
+          border-radius: 1em;
+          color:#fff;
+          background-color: mediumblue;
+          transition-property:background-color;
+          transition-duration: .2s;
+          transition-timing-function:ease-out;
+        }
+
+        a.smooth:hover,a.smooth:focus {
+            background-color: red;
+        }
+
+        img.onepiece{
+            width: 300px;
+            height: 150px;
+            transform:rotate(-10deg);
+        }
+        img.onepiece2{
+            width: 300px;
+            height: 150px;
+            transform:translate(300px,0px);
+        }
+        img.onepiece3{
+            width: 300px;
+            height: 150px;
+            transform: scale(.5);
+        }
+
+        @keyframes webdev {
+            0% {background-color: red;}
+            25% {background-color:rgb(55, 0, 255)d;}
+            50% {background-color: rgb(0, 255, 115);}
+            75% {background-color: rgb(255, 0, 179);}
+            100% {background-color: rgb(208, 255, 0);}
+        }
+
+        div {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            animation-name:webdev;
+            animation-duration:8s;
+            animation-iteration-count: infinite;
+        }
+        
+        .div1 {
+            animation-timing-function: ease;
+        }
+        .div2 {
+            animation-timing-function:ease-in;
+        }
+        .div3 {
+            animation-timing-function:ease-out;
+        }
+        .div4 {
+            animation-timing-function:ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <audio src="CHNDTR - Mine.mp3" controls autoplay>Sampuru</audio>
+        <form>
+            <video src="Leessang - Tears.mp4" width="50%" controls></video></br>
+            <input type="button" onclick="PlayVideo();" value="Play"/>
+        </form>
+        </br>
+        <a href="" class="smooth">Ralp</a></br>
+
+        <img class="onepiece" src="onepiece.jpg"></br>
+        <img class="onepiece2" src="onepiece.jpg"></br>
+        <img class="onepiece3" src="onepiece.jpg"></br>
+
+        <div class="div1">
+            Div Example is this.
+        </div>
+        <div class="div2">
+            Div Example is this.
+        </div>
+        <div class="div3">
+            Div Example is this.
+        </div>
+        <div class="div4">
+            Div Example is this.
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
