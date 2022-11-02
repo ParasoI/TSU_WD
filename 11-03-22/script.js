@@ -11,11 +11,16 @@ function getMultiplier() {
     return Number(multiplierInput.value);
 }
 
+function clearProductList() {
+    productList = [];
+}
+
 
 //View
 function renderTable() {
     let productContainer = document.getElementById('product-container');
     productContainer.style.display = "block";
+    productContainer.innerHTML = "<h3>Results</h3>";
 
     productList.forEach(function (productParagraph) {
         productContainer.appendChild(productParagraph);
@@ -28,9 +33,10 @@ function process() {
     const multiplicandLimit = getMultiplicandLimit();
     const multiplier = getMultiplier();
     
+    clearProductList();
     calculate(multiplicandLimit, multiplier);
     renderTable();
-    
+
 }
 
 function calculate(multiplicandLimit, multiplier) {
