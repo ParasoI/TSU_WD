@@ -1,4 +1,6 @@
 //Model
+let productList = [];
+
 function getMultiplicandLimit() {
     const multiplicandLimitInput = document.getElementById('multiplicand-limit');
     return Number(multiplicandLimitInput.value);
@@ -11,23 +13,33 @@ function getMultiplier() {
 
 
 //View
+function renderTable() {
+    let productContainer = document.getElementById('product-container');
+    productContainer.style.display = "block";
+
+    productList.forEach(function (productParagraph) {
+        productContainer.appendChild(productParagraph);
+    })
+
+}
 
 //Controller
 function process() {
     const multiplicandLimit = getMultiplicandLimit();
     const multiplier = getMultiplier();
     
-    let productContainer = document.getElementById('product-container');
-    productContainer.a
-    productContainer.style.display = "block";
+    calculate(multiplicandLimit, multiplier);
+    renderTable();
+    
+}
 
-    for(let i = 1;i <= multiplicandLimit;i++) {
+function calculate(multiplicandLimit, multiplier) {
+    for(i = 1;i <= multiplicandLimit;i++) {
         let paragraph = document.createElement("p");
         paragraph.innerText = multiply(i, multiplier);
-
-        productContainer.appendChild(paragraph);
+        productList.push(paragraph);
     }
-    
+
 }
 
 function multiply(multiplicand, multiplier) {
