@@ -27,33 +27,33 @@
             <p class="password-label label">Password</p>
             <input class="password-input textarea" type="password" name="" id="" placeholder="Password">
             <input class="login-button" type="submit" value="Log In">
-            <a class="sign-up-button" href="#sign-up-page">Sign Up</a>
+            <input class="sign-up-button" type="button" value="Sign Up" onclick="openSignup()">
         </form>
     </div>
 
-    <div class="sign-up-background">
+    <div class="sign-up-background" id="sign-up-background" onclick="closeSignup()">
 
     </div>
-    <div class="sign-up-screen">
+    <div class="sign-up-screen" id="sign-up-screen">
         <div class="signup-header">
             <h1 class="signup-title">Sign Up</h1>
             <div class="category-container">
-                <div class="category client-category">
-                    <div class="category-icon-container">
+                <div class="category client-category" onclick="chooseClient()">
+                    <div class="category-icon-container" id="client-category">
                         <img class="category-icon" src="res/icons/client-icon.png" alt="">
                     </div>
                     <p class="category-label">Client</p>
                 </div>
-                <div class="category">
-                    <div class="category-icon-container">
+                <div class="category company-category" onclick="chooseCompany()">
+                    <div class="category-icon-container" id="company-category">
                         <img class="category-icon" src="res/icons/company-icon.png" alt="">
                     </div>
-                    <p class="category-label">Client</p>
+                    <p class="category-label">Company</p>
                 </div>
             </div>
         </div>
         
-        <form class="signup-form" action="">
+        <form class="signup-client-form" id="signup-client-form" action="">
             <div class="signup-name">
                 <input class="signup-first-name signup-input" type="text" name="" id="" placeholder="First Name">
                 <input class="signup-last-name signup-input" type="text" name="" id="" placeholder="Last Name">
@@ -61,6 +61,29 @@
             <input class="signup-username signup-input" type="text" name="" id="" placeholder="Username">
             <input class="signup-password signup-input" type="password" name="" id="" placeholder="Password">
             <input class="signup-address signup-input" type="text" name="" id="" placeholder="Address">
+            <input class="signup-mobile-number signup-input" type="text" name="" id="" placeholder="Mobile Number">
+            <input class="signup-email signup-input" type="text" name="" id="" placeholder="Email">
+            <div class="signup-submit-button-container">
+                <input class="signup-submit-button" type="button" name="" id="" value="Submit">
+            </div>
+        </form>
+
+        <form class="signup-company-form" id="signup-company-form" action="">
+            <input class="signup-first-name signup-input" type="text" name="" id="" placeholder="Company Name">
+            <input class="signup-username signup-input" type="text" name="" id="" placeholder="Username">
+            <input class="signup-password signup-input" type="password" name="" id="" placeholder="Password">
+            <select name="" id="" class="signup-category signup-input">
+                <option value="Electric">Electric</option>
+                <option value="Water">Water</option>
+                <option value="Internet">Internet</option>
+                <option value="Insurance">Insurance</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Loan">Loan</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="School">School</option>
+                <option value="Government">Government</option>
+            </select>
             <input class="signup-mobile-number signup-input" type="text" name="" id="" placeholder="Mobile Number">
             <input class="signup-email signup-input" type="text" name="" id="" placeholder="Email">
             <div class="signup-submit-button-container">
